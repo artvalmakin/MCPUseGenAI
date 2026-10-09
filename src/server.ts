@@ -14,7 +14,7 @@ function error(message: string) {
 
 export function createServer(): McpServer {
   const server = new McpServer(
-    { name: 'usegenai-cases', version: '0.1.0' },
+    { name: 'usegenai-cases', title: 'База кейсов генеративного ИИ (usegenai.ru)', version: '0.1.0' },
     {
       instructions:
         'База кейсов применения генеративного ИИ в компаниях (usegenai.ru). ' +
