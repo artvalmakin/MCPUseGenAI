@@ -13,8 +13,12 @@ MCP-сервер для поиска кейсов применения гене�
 
 ## Эндпоинты
 
-- `POST /mcp` — MCP (Streamable HTTP, stateless). Требует `Authorization: Bearer <MCP_API_KEY>` (или `?key=<MCP_API_KEY>`).
+- `POST /mcp` — MCP (Streamable HTTP, stateless).
+- `GET /sse` + `POST /messages` — устаревший транспорт HTTP+SSE для старых клиентов.
 - `GET /health` — проверка работоспособности.
+
+Авторизация ключом `MCP_API_KEY` любым из способов: `Authorization: Bearer <ключ>`, Basic-авторизация
+(логин любой, пароль — ключ), заголовок `X-API-Key: <ключ>` или параметр `?key=<ключ>`.
 
 ## Переменные окружения
 
